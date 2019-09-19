@@ -1,0 +1,420 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="referrer" content="always"><meta name="author" content="bukas"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="theme-color" content="#c05b4d"><meta name="msapplication-navbutton-color" content="#c05b4d"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#c05b4d"><meta name="format-detection" content="telphone=no, email=no"><meta name="msapplication-TileColor" content="#c05b4d"><meta name="screen-orientation" content="portrait"><meta name="x5-orientation" content="portrait"><meta name="apple-touch-fullscreen" content="yes"><meta name="full-screen" content="yes"><meta name="x5-fullscreen" content="true"><meta name="x5-page-mode" content="app"><meta name="browsermode" content="application"><meta name="msapplication-config" content="/browserconfig.xml"><link rel="manifest" href="/manifest.json"><meta name="msapplication-TileImage" content="/image/icon/144x144.png"><link rel="apple-touch-icon" sizes="60x60" href="/image/icon/60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/image/icon/72x72.png"><link rel="apple-touch-icon" sizes="120x120" href="/image/icon/120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/image/icon/144x144.png"><link rel="icon" type="image/png" sizes="192x192" href="/image/icon/192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/image/icon/32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/image/icon/96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/image/icon/16x16.png"><meta name="description" content="Google JavaScript 编码风格"><meta name="keywords" content="javascript, 前端博客"><meta name="baidu-site-verification" content="SWwJlIQz43"><meta name="google-site-verification" content="9c8gt3muwQc_44xCxDE2Op-g1Wn9C2vzhYP-rXVLqlU"><link rel="amphtml" href="https://mercury.postlight.com/amp?url=https://www.noonme.com/post/2014/03/Google JavaScript 编码风格/"><link rel="alternate" href="/rss.xml" title="前端博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0"><link rel="canonical" href="https://www.noonme.com/post/2014/03/Google JavaScript 编码风格/"><link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.css"><link rel="stylesheet" href="/lib/nprogress/nprogress.min.css"><link rel="stylesheet" href="/css/style.css?v=2.11.0"><script id="baidu_analytics">var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?b55278bdcb7115441071d19eb18b0d97";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-49034721-1"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-49034721-1")</script><script id="baidu_push">!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script src="//cdn1.lncld.net/static/js/3.1.1/av-min.js"></script><script id="leancloud">AV.init({appId:"xoEVsPhgw6N3YPfMBXnq6q1K-gzGzoHsz",appKey:"WMWiVHdG2AKdDrC6kgUCoBnU"})</script><script>window.config={leancloud:{app_id:"xoEVsPhgw6N3YPfMBXnq6q1K-gzGzoHsz",app_key:"WMWiVHdG2AKdDrC6kgUCoBnU"},toc:!0,fancybox:!0,pjax:!0,latex:!1}</script><title>Google JavaScript 编码风格 - 前端博客</title></head><body><div id="mobile-navbar" class="mobile-navbar"><div class="mobile-header-logo"><a href="/." class="logo">前端博客</a></div><div class="mobile-navbar-icon"><span></span> <span></span> <span></span></div></div><nav id="mobile-menu" class="mobile-menu slideout-menu"><ul class="mobile-menu-list"><a href="/"><li class="mobile-menu-item">首页</li></a><a href="/archives/"><li class="mobile-menu-item">归档</li></a><a href="/about"><li class="mobile-menu-item">关于</li></a></ul></nav><div class="container" id="mobile-panel"><header id="header" class="header"><div class="logo-wrapper"><a href="/." class="logo">前端博客</a></div><nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item"><a class="menu-item-link" href="/">首页</a></li><li class="menu-item"><a class="menu-item-link" href="/archives/">归档</a></li><li class="menu-item"><a class="menu-item-link" href="/about">关于</a></li></ul></nav></header><main id="main" class="main"><div class="content-wrapper"><div id="content" class="content"><article class="post"><header class="post-header"><h1 class="post-title">Google JavaScript 编码风格</h1><div class="post-meta"><span class="post-time">2014-03-23 </span><span class="post-category"><a href="/categories/technology/">technology</a> </span><span class="post-visits" data-url="/post/2014/03/Google JavaScript 编码风格/" data-title="Google JavaScript 编码风格">阅读次数 0</span></div></header><div class="post-content"><p>JavaScript 是一种客户端脚本语言, Google 的许多开源工程中都有用到它. 这份指南列出了编写 JavaScript 时需要遵守的规则.</p><a id="more"></a><p><strong>命名</strong></p><p>通常, 使用</p><pre><code>functionNamesLikeThis, 
+variableNamesLikeThis, 
+ClassNamesLikeThis, 
+EnumNamesLikeThis,
+methodNamesLikeThis, 
+SYMBOLIC_CONSTANTS_LIKE_THIS
+</code></pre><p><em>属性和方法</em></p><ul><li>文件或类中的 私有 属性, 变量和方法名应该以下划线 &quot;_&quot; 开头.</li><li>保护 属性, 变量和方法名不需要下划线开头, 和公共变量名一样.</li></ul><p><em>方法和函数参数</em></p><p>可选参数以 opt_ 开头.</p><p>函数的参数个数不固定时, 应该添加最后一个参数 var_args 为参数的个数. 你也可以不设置 var_args而取代使用 arguments.</p><p>可选和可变参数应该在 @param 标记中说明清楚. 虽然这两个规定对编译器没有任何影响, 但还是请尽量遵守</p><p><em>Getters 和 Setters</em></p><p>Getters 和 setters 并不是必要的. 但只要使用它们了, 就请将 getters 命名成 getFoo() 形式, 将 setters 命名成 setFoo(value) 形式. (对于布尔类型的 getters, 使用 isFoo() 也可.)</p><p><em>命名空间</em></p><p>JavaScript 不支持包和命名空间.</p><p>不容易发现和调试全局命名的冲突, 多个系统集成时还可能因为命名冲突导致很严重的问题. 为了提高 JavaScript 代码复用率, 我们遵循下面的约定以避免冲突.</p><ul><li><p>为全局代码使用命名空间</p><p>在全局作用域上, 使用一个唯一的, 与工程/库相关的名字作为前缀标识. 比如, 你的工程是 &quot;Project Sloth&quot;, 那么命名空间前缀可取为 sloth.*.</p><pre><code>var sloth = {};
+
+sloth.sleep = function() {
+	...
+};
+</code></pre><p>许多 JavaScript 库, 包括 <a href="https://developers.google.com/closure/library/?csw=1" target="_blank" rel="noopener">the Closure Library </a>and <a href="http://dojotoolkit.org/" target="_blank" rel="noopener">Dojo toolkit</a> 为你提供了声明你自己的命名空间的函数. 比如:</p><pre><code>goog.provide('sloth');
+
+sloth.sleep = function() {
+	...
+};
+</code></pre></li><li><p>明确命名空间所有权</p><p>当选择了一个子命名空间, 请确保父命名空间的负责人知道你在用哪个子命名空间, 比如说, 你为工程 'sloths' 创建一个 'hats' 子命名空间, 那确保 Sloth 团队人员知道你在使用 sloth.hats.</p></li><li><p>外部代码和内部代码使用不同的命名空间</p><p>&quot;外部代码&quot; 是指来自于你代码体系的外部, 可以独立编译. 内外部命名应该严格保持独立. 如果你使用了外部库, 他的所有对象都在 foo.hats.* 下, 那么你自己的代码不能在 foo.hats.*下命名, 因为很有可能其他团队也在其中命名.</p><pre><code>foo.require('foo.hats');
+
+/**
+* WRONG -- Do NOT do this.
+* @constructor
+* @extend {foo.hats.RoundHat}
+*/
+foo.hats.BowlerHat = function() {
+};
+</code></pre><p>如果你需要在外部命名空间中定义新的 API, 那么你应该直接导出一份外部库, 然后在这份代码中修改. 在你的内部代码中, 应该通过他们的内部名字来调用内部 API , 这样保持一致性可让编译器更好的优化你的代码.</p><pre><code>foo.provide('googleyhats.BowlerHat');
+
+foo.require('foo.hats');
+
+/**
+* @constructor
+* @extend {foo.hats.RoundHat}
+*/
+googleyhats.BowlerHat = function() {
+	...
+};
+
+goog.exportSymbol('foo.hats.BowlerHat', googleyhats.BowlerHat);
+</code></pre></li><li><p>重命名那些名字很长的变量, 提高可读性</p><p>主要是为了提高可读性. 局部空间中的变量别名只需要取原名字的最后部分.</p><pre><code>/**
+* @constructor
+*/
+some.long.namespace.MyClass = function() {
+};
+
+/**
+* @param {some.long.namespace.MyClass} a
+*/
+some.long.namespace.MyClass.staticHelper = function(a) {
+	...
+};
+
+myapp.main = function() {
+	var MyClass = some.long.namespace.MyClass;
+	var staticHelper = some.long.namespace.MyClass.staticHelper;
+	staticHelper(new MyClass());
+};
+</code></pre><p>不要对命名空间创建别名.</p><pre><code>myapp.main = function() {
+	var namespace = some.long.namespace;
+	namespace.MyClass.staticHelper(new namespace.MyClass());
+};
+</code></pre><p>除非是枚举类型, 不然不要访问别名变量的属性.</p><pre><code>//right
+/** @enum {string} */
+some.long.namespace.Fruit = {
+	APPLE: 'a',
+	BANANA: 'b'
+};
+
+myapp.main = function() {
+	var Fruit = some.long.namespace.Fruit;
+	switch (fruit) {
+		case Fruit.APPLE:
+			...
+		case Fruit.BANANA:
+			...
+	}
+};
+
+//wrong
+myapp.main = function() {
+	var MyClass = some.long.namespace.MyClass;
+	MyClass.staticHelper(null);
+};
+
+不要在全局范围内创建别名, 而仅在函数块作用域中使用.
+</code></pre></li><li><p>文件名</p><p>文件名应该使用小写字符, 以避免在有些系统平台上不识别大小写的命名方式. 文件名以.js结尾, 不要包含除 - 和 _ 外的标点符号(使用 - 优于 _).</p></li></ul><p><strong>自定义 toString() 方法</strong></p><p>应该总是成功调用且不要抛异常.</p><blockquote><p>可自定义 toString() 方法, 但确保你的实现方法满足: (1) 总是成功 (2) 没有其他负面影响. 如果不满足这两个条件, 那么可能会导致严重的问题, 比如, 如果 toString() 调用了包含 assert 的函数, assert 输出导致失败的对象, 这在 toString() 也会被调用.</p></blockquote><p><strong>延迟初始化</strong></p><p>可以</p><blockquote><p>没必要在每次声明变量时就将其初始化.</p></blockquote><p><strong>明确作用域</strong></p><p>任何时候都需要</p><blockquote><p>任何时候都要明确作用域 - 提高可移植性和清晰度. 例如, 不要依赖于作用域链中的 window 对象. 可能在其他应用中, 你函数中的 window 不是指之前的那个窗口对象.</p></blockquote><p><strong>代码格式化</strong></p><p>主要依照C++ 格式规范 ( <a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-cpp-styleguide/" target="_blank" rel="noopener">中文版</a> ), 针对 JavaScript, 还有下面一些附加说明.</p><p><em>大括号</em></p><p>分号会被隐式插入到代码中, 所以你务必在同一行上插入大括号. 例如:</p><pre><code>if (something) {
+	// ...
+} else {
+	// ...
+}
+</code></pre><p><em>数组和对象的初始化</em></p><p>如果初始值不是很长, 就保持写在单行上:</p><pre><code>var arr = [1, 2, 3];  // No space after [ or before ].
+var obj = {a: 1, b: 2, c: 3};  // No space after { or before }.
+</code></pre><p>初始值占用多行时, 缩进2个空格.</p><pre><code>// Object initializer.
+var inset = {
+  top: 10,
+  right: 20,
+  bottom: 15,
+  left: 12
+};
+
+// Array initializer.
+this.rows_ = [
+  '&quot;Slartibartfast&quot; &lt;fjordmaster@magrathea.com&gt;',
+  '&quot;Zaphod Beeblebrox&quot; &lt;theprez@universe.gov&gt;',
+  '&quot;Ford Prefect&quot; &lt;ford@theguide.com&gt;',
+  '&quot;Arthur Dent&quot; &lt;has.no.tea@gmail.com&gt;',
+  '&quot;Marvin the Paranoid Android&quot; &lt;marv@googlemail.com&gt;',
+  'the.mice@magrathea.com'
+];
+
+// Used in a method call.
+goog.dom.createDom(goog.dom.TagName.DIV, {
+  id: 'foo',
+  className: 'some-css-class',
+  style: 'display:none'
+}, 'Hello, world!');
+</code></pre><p>比较长的标识符或者数值, 不要为了让代码好看些而手工对齐. 如:</p><pre><code>CORRECT_Object.prototype = {
+  a: 0,
+  b: 1,
+  lengthyName: 2
+};
+</code></pre><p>不要这样做:</p><pre><code>WRONG_Object.prototype = {
+  a          : 0,
+  b          : 1,
+  lengthyName: 2
+};
+</code></pre><p><em>函数参数</em></p><p>尽量让函数参数在同一行上. 如果一行超过 80 字符, 每个参数独占一行, 并以4个空格缩进, 或者与括号对齐, 以提高可读性. 尽可能不要让每行超过80个字符. 比如下面这样:</p><pre><code>// Four-space, wrap at 80.  Works with very long function names, survives
+// renaming without reindenting, low on space.
+goog.foo.bar.doThingThatIsVeryDifficultToExplain = function(
+	veryDescriptiveArgumentNumberOne,veryDescriptiveArgumentTwo,
+	tableModelEventHandlerProxy, artichokeDescriptorAdapterIterator) {
+		// ...
+};
+
+// Four-space, one argument per line.  Works with long function names,
+// survives renaming, and emphasizes each argument.
+goog.foo.bar.doThingThatIsVeryDifficultToExplain = function(
+	veryDescriptiveArgumentNumberOne,
+	veryDescriptiveArgumentTwo,
+	tableModelEventHandlerProxy,
+	artichokeDescriptorAdapterIterator) {
+		// ...
+};
+
+// Parenthesis-aligned indentation, wrap at 80.  Visually groups arguments,
+// low on space.
+function foo(veryDescriptiveArgumentNumberOne, veryDescriptiveArgumentTwo,
+         tableModelEventHandlerProxy, artichokeDescriptorAdapterIterator) {
+	// ...
+}
+
+// Parenthesis-aligned, one argument per line.  Visually groups and
+// emphasizes each individual argument.
+function bar(veryDescriptiveArgumentNumberOne,
+         veryDescriptiveArgumentTwo,
+         tableModelEventHandlerProxy,
+         artichokeDescriptorAdapterIterator) {
+	// ...
+}
+</code></pre><p><em>传递匿名函数</em></p><p>如果参数中有匿名函数, 函数体从调用该函数的左边开始缩进2个空格, 而不是从 function 这个关键字开始. 这让匿名函数更加易读 (不要增加很多没必要的缩进让函数体显示在屏幕的右侧).</p><pre><code>var names = items.map(function(item) {
+                    return item.name;
+                  });
+
+prefix.something.reallyLongFunctionName('whatever', function(a1, a2) {
+	if (a1.equals(a2)) {
+		someOtherLongFunctionName(a1);
+	} else {
+		andNowForSomethingCompletelyDifferent(a2.parrot);
+	}
+});
+</code></pre><p><em>更多的缩进</em></p><p>事实上, 除了 初始化数组和对象 , 和传递匿名函数外, 所有被拆开的多行文本要么选择与之前的表达式左对齐, 要么以4个(而不是2个)空格作为一缩进层次.</p><pre><code>someWonderfulHtml = '' +
+                getEvenMoreHtml(someReallyInterestingValues, moreValues,
+                                evenMoreParams, 'a duck', true, 72,
+                                slightlyMoreMonkeys(0xfff)) +
+                '';
+
+thisIsAVeryLongVariableName =
+hereIsAnEvenLongerOtherFunctionNameThatWillNotFitOnPrevLine();
+
+thisIsAVeryLongVariableName = 'expressionPartOne' + someMethodThatIsLong() +
+	thisIsAnEvenLongerOtherFunctionNameThatCannotBeIndentedMore();
+
+someValue = this.foo(
+	shortArg,
+	'Some really long string arg - this is a pretty common case, actually.',
+	shorty2,
+	this.bar());
+
+if (searchableCollection(allYourStuff).contains(theStuffYouWant) &amp;&amp;
+!ambientNotification.isActive() &amp;&amp; (client.isAmbientSupported() ||
+                                    client.alwaysTryAmbientAnyways()) {
+	ambientNotification.activate();
+}
+</code></pre><p><em>空行</em></p><p>使用空行来划分一组逻辑上相关联的代码片段.</p><pre><code>doSomethingTo(x);
+doSomethingElseTo(x);
+andThen(x);
+
+nowDoSomethingWith(y);
+
+andNowWith(z);
+</code></pre><p><em>二元和三元操作符</em></p><p>操作符始终跟随着前行, 这样就不用顾虑分号的隐式插入问题. 如果一行实在放不下, 还是按照上述的缩进风格来换行.</p><pre><code>var x = a ? b : c;  // All on one line if it will fit.
+
+// Indentation +4 is OK.
+var y = a ?
+	longButSimpleOperandB : longButSimpleOperandC;
+
+// Indenting to the line position of the first operand is also OK.
+var z = a ?
+    	moreComplicatedB :
+    	moreComplicatedC;
+</code></pre><p><strong>括号</strong></p><p>只在需要的时候使用</p><p>不要滥用括号, 只在必要的时候使用它.</p><p>对于一元操作符(如delete, typeof 和 void ), 或是在某些关键词(如 return, throw, case, new )之后, 不要使用括号.</p><p><strong>字符串</strong></p><p>使用 ' 优于 &quot;</p><p>单引号 (') 优于双引号 (&quot;). 当你创建一个包含 HTML 代码的字符串时就知道它的好处了.</p><pre><code>var msg = 'This is some HTML';
+</code></pre><p><strong>可见性 (私有域和保护域)</strong></p><p>推荐使用 JSDoc 中的两个标记: @private 和 @protected</p><p>JSDoc 的两个标记 @private 和 @protected 用来指明类, 函数, 属性的可见性域.</p><p>标记为 @private 的全局变量和函数, 表示它们只能在当前文件中访问.</p><p>标记为 @private 的构造器, 表示该类只能在当前文件或是其静态/普通成员中实例化; 私有构造器的公共静态属性在当前文件的任何地方都可访问, 通过 instanceof 操作符也可.</p><p>永远不要为 全局变量, 函数, 构造器加 @protected 标记.</p><pre><code>// File 1.
+// AA_PrivateClass_ and AA_init_ are accessible because they are global
+// and in the same file.
+
+/**
+* @private
+* @constructor
+*/
+AA_PrivateClass_ = function() {
+};
+
+/** @private */
+function AA_init_() {
+	return new AA_PrivateClass_();
+}
+
+AA_init_();
+</code></pre><p>标记为 @private 的属性, 在当前文件中可访问它; 如果是类属性私有, &quot;拥有&quot;该属性的类的所有静态/普通成员也可访问, 但它们不能被不同文件中的子类访问或覆盖.</p><p>标记为 @protected 的属性, 在当前文件中可访问它, 如果是类属性保护, 那么&quot;拥有&quot;该属性的类及其子类中的所有静态/普通成员也可访问.</p><blockquote><p>注意: 这与 C++, Java 中的私有和保护不同, 它们是在当前文件中, 检查是否具有访问私有/保护属性的权限, 有权限即可访问, 而不是只能在同一个类或类层次上. 而 C++ 中的私有属性不能被子类覆盖. (C++/Java 中的私有/保护是指作用域上的可访问性, 在可访问性上的限制. JS 中是在限制在作用域上. PS: 可见性是与作用域对应)</p></blockquote><pre><code>// File 1.
+
+/** @constructor */
+AA_PublicClass = function() {
+};
+
+/** @private */
+AA_PublicClass.staticPrivateProp_ = 1;
+
+/** @private */
+AA_PublicClass.prototype.privateProp_ = 2;
+
+/** @protected */
+AA_PublicClass.staticProtectedProp = 31;
+
+/** @protected */
+AA_PublicClass.prototype.protectedProp = 4;
+
+// File 2.
+
+/**
+* @return {number} The number of ducks we've arranged in a row.
+*/
+AA_PublicClass.prototype.method = function() {
+	// Legal accesses of these two properties.
+	return this.privateProp_ + AA_PublicClass.staticPrivateProp_;
+};
+
+// File 3.
+
+/**
+* @constructor
+* @extends {AA_PublicClass}
+*/
+AA_SubClass = function() {
+	// Legal access of a protected static property.
+	AA_PublicClass.staticProtectedProp = this.method();
+};
+goog.inherits(AA_SubClass, AA_PublicClass);
+
+/**
+* @return {number} The number of ducks we've arranged in a row.
+*/
+AA_SubClass.prototype.method = function() {
+	// Legal access of a protected instance property.
+	return this.protectedProp;
+};
+</code></pre><p><strong>JavaScript 类型</strong></p><p>强烈建议你去使用编译器.</p><p>如果使用 JSDoc, 那么尽量具体地, 准确地根据它的规则来书写类型说明. 目前支持两种 <a href="http://wiki.ecmascript.org/doku.php?id=spec:spec" target="_blank" rel="noopener">JS2</a> 和 JS1.x 类型规范.</p><p><em>JavaScript 类型语言</em></p><p>JS2 提议中包含了一种描述 JavaScript 类型的规范语法, 这里我们在 JSDoc 中采用其来描述函数参数和返回值的类型.</p><p>JSDoc 的类型语言, 按照 JS2 规范, 也进行了适当改变, 但编译器仍然支持旧语法.</p><p><img src="http://blog.u.qiniudn.com/uploads/javascript1.jpg" alt="Javascript类型语言"></p><p><em>JavaScript中的类型</em></p><p><img src="http://blog.u.qiniudn.com/uploads/javascript2.jpg" alt="Javascript中的类型"> <img src="http://blog.u.qiniudn.com/uploads/javascript3.jpg" alt="Javascript中的类型"></p><p><em>可空 vs. 可选 参数和属性</em></p><p>JavaScript 是一种弱类型语言, 明白可选, 非空和未定义参数或属性之间的细微差别还是很重要的.</p><p>对象类型(引用类型)默认非空. 注意: 函数类型默认不能为空. 除了字符串, 整型, 布尔, undefined 和 null 外, 对象可以是任何类型.</p><pre><code>/**
+* Some class, initialized with a value.
+* @param {Object} value Some value.
+* @constructor
+*/
+function MyClass(value) {
+	/**
+	* Some value.
+	* @type {Object}
+	* @private
+	*/
+	this.myValue_ = value;
+}
+</code></pre><p>告诉编译器 myValue_ 属性为一对象或 null. 如果 myValue_ 永远都不会为 null, 就应该如下声明:</p><pre><code>/**
+* Some class, initialized with a non-null value.
+* @param {!Object} value Some value.
+* @constructor
+*/
+function MyClass(value) {
+	/**
+	* Some value.
+	* @type {!Object}
+	* @private
+	*/
+ 	this.myValue_ = value;
+}
+</code></pre><p>这样, 当编译器在代码中碰到 MyClass 为 null 时, 就会给出警告.</p><p>函数的可选参数可能在运行时没有定义, 所以如果他们又被赋给类属性, 需要声明成:</p><pre><code>/**
+* Some class, initialized with an optional value.
+* @param {Object=} opt_value Some value (optional).
+* @constructor
+*/
+function MyClass(opt_value) {
+	/**
+	* Some value.
+	* @type {Object|undefined}
+	* @private
+	*/
+	this.myValue_ = opt_value;
+}
+</code></pre><p>这告诉编译器 myValue_ 可能是一个对象, 或 null, 或 undefined.</p><blockquote><p>注意: 可选参数 opt_value 被声明成 {Object=}, 而不是 {Object|undefined}. 这是因为可选参数可能是 undefined. 虽然直接写 undefined 也并无害处, 但鉴于可阅读性还是写成上述的样子.</p></blockquote><p>最后, 属性的非空和可选并不矛盾, 属性既可是非空, 也可是可选的. 下面的四种声明各不相同:</p><pre><code>/**
+* Takes four arguments, two of which are nullable, and two of which are
+* optional.
+* @param {!Object} nonNull Mandatory (must not be undefined), must not be null.
+* @param {Object} mayBeNull Mandatory (must not be undefined), may be null.
+* @param {!Object=} opt_nonNull Optional (may be undefined), but if present,
+*     must not be null!
+* @param {Object=} opt_mayBeNull Optional (may be undefined), may be null.
+*/
+function strangeButTrue(nonNull, mayBeNull, opt_nonNull, opt_mayBeNull) {
+	// ...
+};
+</code></pre><p><strong>注释</strong></p><p>使用 JSDoc</p><p>我们使用 JSDoc 中的注释风格. 行内注释使用 // 变量 的形式. 另外, 我们也遵循 C++ 代码注释风格 . 这也就是说你需要:</p><ul><li>版权和著作权的信息,</li><li>文件注释中应该写明该文件的基本信息(如, 这段代码的功能摘要, 如何使用, 与哪些东西相关), 来告诉那些不熟悉代码的读者.</li><li>类, 函数, 变量和必要的注释,</li><li>期望在哪些浏览器中执行,</li><li>正确的大小写, 标点和拼写.</li></ul><p>为了避免出现句子片段, 请以合适的大/小写单词开头, 并以合适的标点符号结束这个句子.</p><p>现在假设维护这段代码的是一位初学者. 这可能正好是这样的!</p><p>目前很多编译器可从 JSDoc 中提取类型信息, 来对代码进行验证, 删除和压缩. 因此, 你很有必要去熟悉正确完整的 JSDoc .</p><p><em>JSDoc 标记表</em></p><p><img src="http://blog.u.qiniudn.com/uploads/javascript4.jpg" alt="JSDoc标记表"> <img src="http://blog.u.qiniudn.com/uploads/javascript5.jpg" alt="JSDoc标记表"> <img src="http://blog.u.qiniudn.com/uploads/javascript6.jpg" alt="JSDoc标记表"> <img src="http://blog.u.qiniudn.com/uploads/javascript7.jpg" alt="JSDoc标记表"> <img src="http://blog.u.qiniudn.com/uploads/javascript8.jpg" alt="JSDoc标记表"> <img src="http://blog.u.qiniudn.com/uploads/javascript9.jpg" alt="JSDoc标记表"> <img src="http://blog.u.qiniudn.com/uploads/javascript10.jpg" alt="JSDoc标记表"> <img src="http://blog.u.qiniudn.com/uploads/javascript11.jpg" alt="JSDoc标记表"> <img src="http://blog.u.qiniudn.com/uploads/javascript12.jpg" alt="JSDoc标记表"></p><p>在第三方代码中, 你还会见到其他一些 JSDoc 标记. 这些标记在 JSDoc Toolkit Tag Reference 都有介绍到, 但在 Google 的代码中, 目前不推荐使用. 你可以认为这些是将来会用到的 &quot;保留&quot; 名. 它们包含:</p><ul><li>@augments</li><li>@argument</li><li>@borrows</li><li>@class</li><li>@constant</li><li>@constructs</li><li>@default</li><li>@event</li><li>@example</li><li>@field</li><li>@function</li><li>@ignore</li><li>@inner</li><li>@link</li><li>@memberOf</li><li>@name</li><li>@namespace</li><li>@property</li><li>@public</li><li>@requires</li><li>@returns</li><li>@since</li><li>@static</li><li>@version</li></ul><p><em>JSDoc 中的 HTML</em></p><p>类似于 JavaDoc, JSDoc 支持许多 HTML 标签, 如<code>&lt;code&gt;, &lt;pre&gt;, &lt;tt&gt;, &lt;strong&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, &lt;a&gt;</code>, 等等.</p><p>这就是说 JSDoc 不会完全依照纯文本中书写的格式. 所以, 不要在 JSDoc 中, 使用空白字符来做格式化:</p><pre><code>/**
+* Computes weight based on three factors:
+*   items sent
+*   items received
+*   last timestamp
+*/
+</code></pre><p>上面的注释, 出来的结果是:</p><p>Computes weight based on three factors: items sent items received items received</p><p>应该这样写:</p><pre><code>/**
+* Computes weight based on three factors:
+* &lt;ul&gt;
+* &lt;li&gt;items sent
+* &lt;li&gt;items received
+* &lt;li&gt;last timestamp
+* &lt;/ul&gt;
+*/
+</code></pre><p>另外, 也不要包含任何 HTML 或类 HTML 标签, 除非你就想让它们解析成 HTML 标签.</p><pre><code>/**
+* Changes &lt;b&gt; tags to &lt;span&gt; tags.
+*/
+</code></pre><p>出来的结果是:</p><p>Changes tags to tags.</p><p>另外, 也应该在源代码文件中让其他人更可读, 所以不要过于使用 HTML 标签:</p><pre><code>/**
+* Changes &amp;lt;b&amp;gt; tags to &amp;lt;span&amp;gt; tags.
+*/
+</code></pre><p>上面的代码中, 其他人就很难知道你想干嘛, 直接改成下面的样子就清楚多了:</p><pre><code>/**
+* Changes 'b' tags to 'span' tags.
+*/
+</code></pre><p><strong>编译</strong></p><p>推荐使用</p><p>建议您去使用 JS 编译器, 如 <a href="https://developers.google.com/closure/compiler/" target="_blank" rel="noopener">Closure Compiler</a>.</p><p><strong>Tips and Tricks</strong></p><p>JavaScript 小技巧</p><p><em>True 和 False 布尔表达式</em></p><p>下面的布尔表达式都返回 false:</p><ul><li>null</li><li>undefined</li><li>'' 空字符串</li><li>0 数字0</li></ul><p>但小心下面的, 可都返回 true:</p><ul><li>'0' 字符串0</li><li>[] 空数组</li><li>{} 空对象</li></ul><p>下面段比较糟糕的代码:</p><pre><code>while (x != null) {
+</code></pre><p>你可以直接写成下面的形式(只要你希望 x 不是 0 和空字符串, 和 false):</p><pre><code>while (x) {
+</code></pre><p>如果你想检查字符串是否为 null 或空:</p><pre><code>if (y != null &amp;&amp; y != '') {
+</code></pre><p>但这样会更好:</p><pre><code>if (y) {
+</code></pre><p>注意: 还有很多需要注意的地方, 如:</p><ul><li>Boolean('0') == true</li><li>'0' != true</li><li>0 != null</li><li>0 == []</li><li>0 == false</li><li>Boolean(null) == false</li><li>null != true</li><li>null != false</li><li>Boolean(undefined) == false</li><li>undefined != true</li><li>undefined != false</li><li>Boolean([]) == true</li><li>[] != true</li><li>[] == false</li><li>Boolean({}) == true</li><li>{} != true</li><li>{} != false</li></ul><p><em>条件(三元)操作符 (?:)</em></p><p>三元操作符用于替代下面的代码:</p><pre><code>if (val != 0) {
+	return foo();
+} else {
+	return bar();
+}
+</code></pre><p>你可以写成:</p><pre><code>return val ? foo() : bar();
+</code></pre><p>在生成 HTML 代码时也是很有用的:</p><pre><code>var html = '&lt;input type=&quot;checkbox&quot;' +
+	(isChecked ? ' checked' : '') +
+	(isEnabled ? '' : ' disabled') +
+	' name=&quot;foo&quot;&gt;';
+</code></pre><p><em>&amp;&amp; 和 ||</em></p><p>二元布尔操作符是可短路的, 只有在必要时才会计算到最后一项.</p><p>&quot;||&quot; 被称作为 'default' 操作符, 因为可以这样:</p><pre><code>/** @param {*=} opt_win */
+function foo(opt_win) {
+	var win;
+	if (opt_win) {
+		win = opt_win;
+	} else {
+		win = window;
+	}
+	// ...
+}
+</code></pre><p>你可以使用它来简化上面的代码:</p><pre><code>/** @param {*=} opt_win */
+function foo(opt_win) {
+	var win = opt_win || window;
+	// ...
+}
+</code></pre><p>&quot;&amp;&amp;&quot; 也可简短代码.比如:</p><pre><code>if (node) {
+	if (node.kids) {
+		if (node.kids[index]) {
+  			foo(node.kids[index]);
+		}
+	}
+}
+</code></pre><p>你可以像这样来使用:</p><pre><code>var kid = node &amp;&amp; node.kids &amp;&amp; node.kids[index];
+if (kid) {
+	foo(kid);
+}
+</code></pre><p>不过这样就有点儿过头了:</p><pre><code>node &amp;&amp; node.kids &amp;&amp; node.kids[index] &amp;&amp; foo(node.kids[index]);
+</code></pre><p><em>使用 join() 来创建字符串</em></p><p>通常是这样使用的:</p><pre><code>function listHtml(items) {
+	var html = '&lt;div class=&quot;foo&quot;&gt;';
+	for (var i = 0; i &lt; items.length; ++i) {
+		if (i &gt; 0) {
+  			html += ', ';
+		}
+		html += itemHtml(items[i]);
+	}
+	html += '&lt;/div&gt;';
+	return html;
+}
+</code></pre><p>但这样在 IE 下非常慢, 可以用下面的方式:</p><pre><code>function listHtml(items) {
+	var html = [];
+	for (var i = 0; i &lt; items.length; ++i) {
+		html[i] = itemHtml(items[i]);
+	}
+	return '&lt;div class=&quot;foo&quot;&gt;' + html.join(', ') + '&lt;/div&gt;';
+}
+</code></pre><p>你也可以是用数组作为字符串构造器, 然后通过 myArray.join('') 转换成字符串. 不过由于赋值操作快于数组的 push(), 所以尽量使用赋值操作.</p><p><em>遍历 Node List</em></p><p>Node lists 是通过给节点迭代器加一个过滤器来实现的. 这表示获取他的属性, 如 length 的时间复杂度为 O(n), 通过 length 来遍历整个列表需要 O(n^2).</p><pre><code>var paragraphs = document.getElementsByTagName('p');
+for (var i = 0; i &lt; paragraphs.length; i++) {
+	doSomething(paragraphs[i]);
+}
+</code></pre><p>这样做会更好:</p><pre><code>var paragraphs = document.getElementsByTagName('p');
+for (var i = 0, paragraph; paragraph = paragraphs[i]; i++) {
+	doSomething(paragraph);
+}
+</code></pre><p>这种方法对所有的 collections 和数组(只要数组不包含 falsy 值) 都适用.</p><p>在上面的例子中, 也可以通过 firstChild 和 nextSibling 来遍历孩子节点.</p><pre><code>var parentNode = document.getElementById('foo');
+for (var child = parentNode.firstChild; child; child = child.nextSibling) {
+	doSomething(child);
+}
+</code></pre><p><strong>Parting Words</strong></p><p>保持一致性.</p><p>当你在编辑代码之前, 先花一些时间查看一下现有代码的风格. 如果他们给算术运算符添加了空格, 你也应该添加. 如果他们的注释使用一个个星号盒子, 那么也请你使用这种方式.</p><p>代码风格中一个关键点是整理一份常用词汇表, 开发者认同它并且遵循, 这样在代码中就能统一表述. 我们在这提出了一些全局上的风格规则, 但也要考虑自身情况形成自己的代码风格. 但如果你添加的代码和现有的代码有很大的区别, 这就让阅读者感到很不和谐. 所以, 避免这种情况的发生.</p><p>修订版 2.9</p></div><div class="post-copyright"><p class="copyright-item"><span>原文作者: </span><a href="https://www.noonme.com">bukas</a></p><p class="copyright-item"><span>原文链接: </span><a href="https://www.noonme.com/post/2014/03/Google JavaScript 编码风格/">https://www.noonme.com/post/2014/03/Google JavaScript 编码风格/</a></p><p class="copyright-item"><span>许可协议: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a></p></div><div class="post-reward"><input type="checkbox" name="reward" id="reward" hidden> <label class="reward-button" for="reward">赞赏支持</label><div class="qr-code"><label class="qr-code-image" for="reward"><img class="image" src="/image/reward/wechat.png" title="wechat"></label> <label class="qr-code-image" for="reward"><img class="image" src="/image/reward/alipay.png" title="alipay"></label></div></div><footer class="post-footer"><div class="post-tags"><a href="/tags/javascript/">javascript</a></div><nav class="post-nav"><a class="prev" href="/post/2014/03/如何使用js捕获css3动画/"><i class="iconfont icon-left"></i> <span class="prev-text nav-default">如何使用js捕获css3动画</span> <span class="prev-text nav-mobile">上一篇</span> </a><a class="next" href="/post/2014/03/Google JavaScript 语言规范/"><span class="next-text nav-default">Google JavaScript 语言规范</span> <span class="prev-text nav-mobile">下一篇</span> <i class="iconfont icon-right"></i></a></nav></footer></article></div><div class="comments" id="comments"><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></div></div></main><footer id="footer" class="footer"><div class="social-links"><a href="mailto:yhz1219@gmail.com" class="iconfont icon-email" title="email"></a> <a href="https://github.com/huanz" class="iconfont icon-github" title="github"></a> <a href="http://weibo.com/2335228667/" class="iconfont icon-weibo" title="weibo"></a> <a href="/rss.xml" class="iconfont icon-rss" title="rss"></a></div><div class="copyright"><span class="power-by">由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动 </span><span class="division">|</span> <span class="theme-info">主题 - <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a> </span><span class="copyright-year">&copy;2015 - 2019<span class="heart"> <i class="iconfont icon-heart"></i> </span><span class="author">bukas</span> <span>京ICP备18012917号</span></span></div></footer><div class="back-to-top" id="back-to-top"><i class="iconfont icon-up"></i></div></div><script>var disqus_config=function(){this.page.url="https://www.noonme.com/post/2014/03/Google JavaScript 编码风格/",this.page.identifier="post/2014/03/Google JavaScript 编码风格/",this.page.title="Google JavaScript 编码风格"};!function(){var t=document,e=t.createElement("script");e.src="//bukas.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><script src="/lib/jquery/jquery.min.js"></script><script src="/lib/slideout/slideout.js"></script><script src="/lib/fancybox/jquery.fancybox.pack.js"></script><script src="/lib/pjax/jquery.pjax.min.js"></script><script src="/lib/nprogress/nprogress.min.js"></script><script src="/js/src/even.js?v=2.11.0"></script></body></html>
